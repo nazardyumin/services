@@ -14,3 +14,6 @@ Route::get('/', [ServiceController::class, 'index']) -> name('home');
 Route::get('/admin', [AdminController::class, 'index']) -> name('admin');
 
 Route::post('/add_service', [ServiceController::class, 'store']) -> name('add_service');
+
+Route::get('/order-service/{service?}', [ServiceController::class, 'order']) -> name('order_service');
+Route::get('/orderPage', [ServiceController::class, 'orderPage']) -> name('order_page');
